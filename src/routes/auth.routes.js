@@ -47,8 +47,6 @@ router.post("/authenticate", async (req, res) => {
   });
 });
 
-router.post("/reset_password");
-
 const generateToken = (params = {}) => {
   return jwt.sign(params, process.env.JWT_HASH, {
     expiresIn: "1d",
